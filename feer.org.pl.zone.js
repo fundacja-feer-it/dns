@@ -19,4 +19,3 @@ D('feer.org.pl', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(3600
 
     );
   
-require_glob('feer.org.pl.d/');

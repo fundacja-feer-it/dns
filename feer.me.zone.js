@@ -5,7 +5,6 @@ A('@','2.57.137.47'),
 MX("@", 10, "mail.feer.me."),
 TXT('feer.me.','"v=spf1 a mx include:_spf.atthost.pl -all"'),   
 // Serwer plików FTP + storage 
-
   A('storage','91.205.73.214'),
   A('files','91.205.73.214'),
 
@@ -17,6 +16,10 @@ A('stopka', '91.205.73.212'),
 A('tools','91.205.73.211'),
 A('bugtracker','91.205.73.212'),
 CNAME('jetbrains','feer.fls.jetbrains.com.'),
+
+// tools.feer.me on Mirosoft Azure
+TXT('tools','5c6m43sz2f6xfdtvj9t207s2vswtkwz9'), 
+
 
 // Serwer beta - rozwój nowej strony 
 A('beta','185.255.40.57'),
