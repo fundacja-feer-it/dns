@@ -3,4 +3,4 @@ Utrzymanie domen na Cloudflare
 
 # Obsługiwane domeny 
 - feer.org.pl
-- feer.org.pl 
+- feer.me 
