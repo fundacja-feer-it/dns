@@ -1,21 +1,19 @@
 
-var MDhosting = '128.204.223.44'; //  
+var MDhosting = '128.204.223.44'; 
 
 D('feer.me', noneRegistrar, DnsProvider(cloudflareProvider), DefaultTTL(180),
 
-// Obsługa poczty na serwerze feer.me 
-MX("@", 10, "mail62.mydevil.net."),
-TXT('feer.me.','"v=spf1 mx a include:mail62.mydevil.net -all"'),   
-// Serwer plików FTP + storage 
-  A('storage',MDhosting),
-  A('files',MDhosting),
-  A('user-stoage',MDhosting),
+A('@','128.204.223.44'),
+MX('@',1,'ASPMX.L.GOOGLE.COM.'),
+MX('@',5,'ALT1.ASPMX.L.GOOGLE.COM.'),
+MX('@',5,'ALT2.ASPMX.L.GOOGLE.COM.'),
+MX('@',10,'ALT3.ASPMX.L.GOOGLE.COM.'),
+MX('@',10,'ALT4.ASPMX.L.GOOGLE.COM.'),
+TXT('@', 'v=spf1 include:_spf.mlsend.com include:_spf.google.com ~all'),
+TXT('@','google-site-verification=SU8LiqePlnSYyB-WXjLTQ1mg1SLl5LnnlYrA5btNNn0'),
 
-//CNAME('jetbrains','feer.fls.jetbrains.com.'),
+// Obsługa skrzynek współdzielonych - shared-mailbox.feer.me
+A('shared-mailbox',MDhosting),
+A('civicrm',MDhosting)
 
-// tools.feer.me on Mirosoft Azure
-CNAME('tools','gray-sea-0d8c7ba10.4.azurestaticapps.net.'),
-A('stopka', MDhosting)
-
-
-)
+  );
